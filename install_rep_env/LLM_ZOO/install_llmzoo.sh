@@ -28,5 +28,5 @@ conda create --name LLMZoo python=3.8 || {
     exit 1
 }
 echo "pip installing requirements.txt ..."
-conda run -n LLMZoo pip install-r requirements.txt
+conda run -n LLMZoo pip install -r requirements.txt
 echo "install finished"

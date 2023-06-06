@@ -4,7 +4,7 @@
 # @version: 1.0
 # @Author: Areebol
 # @Date: 2023-06-03 21:16:04
- # @LastEditTime: 2023-06-04 00:00:34
+ # @LastEditTime: 2023-06-06 15:41:17
 ###
 set -e
 
@@ -28,5 +28,5 @@ conda create --name moss python=3.8 || {
     exit 1
 }
 echo "pip installing requirements.txt ..."
-conda run -n moss pip install-r requirements.txt
+conda run -n moss pip install -r requirements.txt
 echo "install finished"
