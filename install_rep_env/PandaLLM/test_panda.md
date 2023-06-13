@@ -49,7 +49,8 @@ conf/llama/zh/llama_13b_zh_instruct_v1_0_ds.yaml
 ```
 
 Command:
-```
-HYDRA_FULL_ERROR=1 deepspeed --include localhost:0,1,2,3,4,5,6,7 trainer_base_ds_mul.py -cp conf/llama/zh -cn <file name of yaml config> 
+```bash
+HYDRA_FULL_ERROR=1 deepspeed --include localhost:2,3,4,5,6,7 trainer_base_ds_mul.py -cp conf/llama/zh -cn llama_7b_zh_instruct_c3_eval_prompt_v1_0_test.yaml
 ```
 我们的训练使用了 2 * 8 * A100 80G GPU。如使用更少的显卡，请相应的调整 `gradient_accumulation_steps` 和 `per_gpu_train_batch_size`.
+
